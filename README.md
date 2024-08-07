@@ -5,6 +5,63 @@
 | سیدمحمدیوسف نجفی      | 99102361      |
 | علی نظری                        | 99102401      |
 
+برای بخش BDD طبق مراحل پیش میرویم:
+ایجاد پروژه جدید maven در Intellij:
+![image](https://github.com/user-attachments/assets/3c04e9f8-2a5f-453c-9697-8e36afb74dd6)
+سپس به فایل pom.xml می‌رویم و dependency های مورد نیاز پروژه را به آن اضافه می‌کنیم:
+![image](https://github.com/user-attachments/assets/c1335d0b-190b-4946-9cf9-69bcd2957dff)
+حال از navigation bar سمت راست صفحه maven->test را ران میکنیم تا Build success را ببینیم:
+![image](https://github.com/user-attachments/assets/21cebdeb-a711-46c7-b141-33b09c55798e)
+
+حال بقیه مراحل را نیز طبق دستور کار پیش می‌رویم که عکس های آن قرار داده شده است:
+![image](https://github.com/user-attachments/assets/7142260d-151c-4090-9302-a97ab38e95ba)
+
+![image](https://github.com/user-attachments/assets/4edbfc3d-8af6-40df-959f-3337368e9d3b)
+
+![image](https://github.com/user-attachments/assets/da8fb2f4-7828-49e5-9239-0aa56fd9bbd2)
+
+![image](https://github.com/user-attachments/assets/58b4124f-008a-467d-97e9-ea3934e5b189)
+
+![image](https://github.com/user-attachments/assets/f7fd81e7-092c-4846-8918-8e22efaedbc3)
+
+![image](https://github.com/user-attachments/assets/9e99bfbe-7ea3-4b21-85ca-b7935e7ce960)
+
+![image](https://github.com/user-attachments/assets/9104c9f1-fb80-44dc-9a7c-3bb0b664c7c0)
+
+در اینجا بدنه ی توابع را پیاده سازی میکنیم:
+![image](https://github.com/user-attachments/assets/fa286e5c-f9b4-4889-8ebb-7a7f550f1ca1)
+
+کلاس Calculator را در مسیر src/main/java/calculator درست می‌کنیم:
+![image](https://github.com/user-attachments/assets/1f61de84-8bd3-47e6-92eb-860e3744dd60)
+
+این بار maven -> test را میزنیم و به ارور میخوریم.
+![image](https://github.com/user-attachments/assets/e7f9e847-a2b2-443a-afe7-be9cdce9c238)
+
+برای رفع این خطا لازم است نسخه بالاتری از Maven را در فایل pom.xml معرفی کنیم. 
+که با اضافه کردن خطوط زیر به این فایل پس از پایان dependencies انجام میشود:
+<properties>
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
+
+![image](https://github.com/user-attachments/assets/64da23a3-6614-4c98-8f9f-7e435e69eb6c)
+مجددا maven->test را میزنیم و این بار build success می‌شود:
+![image](https://github.com/user-attachments/assets/e2e96693-1b7e-4939-8fcd-2d247388ab61)
+
+بر روی فایل calculator.feature کلیک راست می‌کنیم و گزینه run را انتخاب می‌کنیم تا سناریوی این feature ران شود:
+![image](https://github.com/user-attachments/assets/0a327d80-5709-4636-8d85-3341f2e62901)
+
+نتیجه اجرا به صورت زیر است که نشان می‌دهد سناریو موفقیت آمیز تست شده است:
+![image](https://github.com/user-attachments/assets/358e394b-604f-4f7c-a08b-16d40311dc6a)
+
+
+
+
+
+
+
+
+
 
 در گام اول بخش 
 profiling
