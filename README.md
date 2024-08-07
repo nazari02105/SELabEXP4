@@ -55,9 +55,29 @@
 ![image](https://github.com/user-attachments/assets/358e394b-604f-4f7c-a08b-16d40311dc6a)
 
 
+در مسیر test/java/calculator یک کلاس جدید به اسم RunnerTest.java ایجاد می‌کنیم:
+![image](https://github.com/user-attachments/assets/23d04fdd-1bad-4e8c-906a-3a953f4bcdfd)
 
+با زدن فلش سبز کنار اسم کلاس این فایل ران می‌شود ولی متوجه یک مشکل دیگر می‌شویم:
+![image](https://github.com/user-attachments/assets/fb6d4795-7d5b-440e-b0b8-6211547a16b6)
 
+خطایی که نشان دهنده ی عدم یافتن فایل feature است.
+برای رفع آن خط زیر را به ابتدای فایل RunnerTest.java اضافه می‌کنیم.
+@CucumberOptions(features = "src/test/resources/features")
 
+با اجرای مجدد آن خروجی به صورت زیر نمایش داده می‌شود:
+![image](https://github.com/user-attachments/assets/e9f95ec6-5a02-47f5-ace9-dffa04368bca)
+
+با تغییر مقادیر feature و اعداد می توان نتیجه را تست کرد:
+![image](https://github.com/user-attachments/assets/6cb4ba00-066a-49f3-815e-f9b0fe93deab)
+
+حال به شکل زیر به ایجاد تست scenario outline می‌پردازیم:
+![image](https://github.com/user-attachments/assets/329d071d-db57-46a3-8c84-df34d7f15f7f)
+
+و با ران کردن دوباره ی RunnerTest برخی تست ها به مشکل undefined میخورند:
+![image](https://github.com/user-attachments/assets/10df59ba-5988-41a3-ac15-2ea66fffd635)
+
+جواب سوال پایانی این بخش: این موضوع به دلیل این است که نحوه ای که توابع ما نوشته شده اند، با استفاده از رجکس بوده است و قرار است رجکس ارقام را تشخیص دهد، اما یک عدد منفی در این فرمت رجکس به درستی تشخیص داده نمیشود چون رجکسی که نوشته شده، برای تشخیص یک رقم یا بیشتر است، و نه علامت مثبت و منفی. پس عدد منفی به درستی تشخیص داده نمی‌شود و برای همین ارور undefined می‌دهد.
 
 
 
