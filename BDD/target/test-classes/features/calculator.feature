@@ -35,6 +35,11 @@ Feature: Calculator
     When I calculate the square root of the number
     Then The result should be 2.0
 
+  Scenario: square root of a negative number
+    Given One input value, -4
+    When I calculate the square root of the number
+    Then Error with the message "The input should be non negative." for illegal argument should be shown
+
   Scenario Outline: square root a number
     Given One input value, <first>
     When I calculate the square root of the number
@@ -49,6 +54,11 @@ Feature: Calculator
     Given Two input values, 4 and 2
     When I calculate the square root of the division of two numbers
     Then The result should be 1.414
+
+  Scenario: square root of division of two numbers
+    Given Two input values, -4 and 2
+    When I calculate the square root of the division of two numbers
+    Then Error with the message "The input should be non negative." for illegal argument should be shown
 
   Scenario Outline: square root of division of two numbers
     Given Two input values, <first> and <second>

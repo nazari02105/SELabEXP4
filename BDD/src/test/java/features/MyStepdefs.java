@@ -1,10 +1,12 @@
 package features;
 
 import calculator.Calculator;
+import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.runtime.junit.Assertions;
 import org.junit.Assert;
 
 public class MyStepdefs {
@@ -14,6 +16,7 @@ public class MyStepdefs {
     private double value3;
     private int resultInt;
     private double resultDouble;
+    private Exception exception;
 
     @Before
     public void before() {
@@ -48,20 +51,34 @@ public class MyStepdefs {
         Assert.assertEquals(arg0, resultDouble, 0.001);
     }
 
-    @Given("^One input value, (\\d+(?:\\.\\d+)?)$")
+    @Given("^One input value, (-?\\d+(?:\\.\\d+)?)$")
     public void oneInputValue(int arg0) {
         value3 = arg0;
     }
 
     @When("^I calculate the square root of the number$")
     public void iCalculateTheSquareRootOfTheNumber() {
-        resultDouble = calculator.sqrt(value3);
-        System.out.print(resultDouble);
+        try {
+            resultDouble = calculator.sqrt(value3);
+            System.out.print(resultDouble);
+        } catch (Exception e) {
+            exception = e;
+        }
     }
 
     @When("^I calculate the square root of the division of two numbers$")
     public void iCalculateTheSquareRootOfTheDivisionOfTwoNumbers() {
-        resultDouble = calculator.sqrt_division(value1, value2);
-        System.out.print(resultDouble);
+        try {
+            resultDouble = calculator.sqrt_division(value1, value2);
+            System.out.print(resultDouble);
+        } catch (Exception e) {
+            exception = e;
+        }
+    }
+
+    @Then("^Error with the message \"([^\"]*)\" for illegal argument should be shown$")
+    public void errorWithTheMessageShouldBeShown(String arg0) {
+        if (!(exception instanceof IllegalArgumentException)) Assert.fail("");
+        Assert.assertNotSame(arg0, exception.getMessage());
     }
 }

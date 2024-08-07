@@ -11,7 +11,9 @@ public class Calculator {
         return (double) a / b;
     }
 
-    public double sqrt(Number a){
+    public double sqrt(Number a) {
+        double value = a.doubleValue();
+        if (value < 0) throw new IllegalArgumentException("The input should be non negative.");
         return Math.sqrt(a.doubleValue());
     }
 
