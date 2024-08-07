@@ -87,11 +87,38 @@
 ![image](https://github.com/user-attachments/assets/21979bf0-56cd-4c0b-9d40-e08327925064)
 می‌بینیم که همه ی تست ها موفقیت آمیز بوده اند.
 در اینجا بخش 2 این آزمایش که Scenario outline نوشتن بود به پایان میرسد. کد نهایی این بخش نیز در فولد BDD گیت قابل مشاهده است.
+</br>
+حال می خواهیم قابلیت خواسته شده در بخش سوم را پیاده سازی کنیم. برای این کار ابتدا سناریو های هر بخش را پیاده سازی کرده و سپس کد آن را می نویسیم:
+</br>
+نقسیم دو عدد:
+</br>
+![1](https://github.com/user-attachments/assets/910dbb0b-efc7-442e-8a69-d89b38c42e9e)
+![2](https://github.com/user-attachments/assets/e3cf6a93-075d-43bd-8f66-f5b238cf5c2f)
+![4](https://github.com/user-attachments/assets/e31a8669-683e-47c7-ab63-550ccf5ef228)
 
+</br>
+محاسبه مجذور عدد:
 
+![3](https://github.com/user-attachments/assets/fe86558b-7428-42dc-b026-952557c18174)
 
+![5](https://github.com/user-attachments/assets/abd8b1ca-bb67-48ed-99bd-811bc0e06c1a)
 
+![6](https://github.com/user-attachments/assets/f0082ae1-9140-4bec-9643-413ac98f7014)
+</br>
+محاسبه مجذور تقسیم دو عدد:
+</br>
+![7](https://github.com/user-attachments/assets/50422685-70ab-45f0-9beb-b303ca524068)
+![8](https://github.com/user-attachments/assets/f76686d7-c9fb-45fe-a829-78f7cfb6f32d)
+![9](https://github.com/user-attachments/assets/7230020c-561d-4916-bd34-3997e618221e)
+</br>
+اجرای تست ها:
+</br>
+![10](https://github.com/user-attachments/assets/c31044bf-6915-4c93-8ab5-ba210185af6b)
+![11](https://github.com/user-attachments/assets/85779245-ed9b-4d92-94df-14b7c323fe91)
 
+</br>
+بخش profiling:
+</br>
 در گام اول بخش 
 profiling
 نیاز بود تا 
